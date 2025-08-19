@@ -136,7 +136,7 @@ services:
       - _APP_MAINTENANCE_RETENTION_CACHE
       - _APP_MAINTENANCE_RETENTION_ABUSE
       - _APP_MAINTENANCE_RETENTION_AUDIT
-      - _APP_MAINTENANCE_RETENTION_AUDIT_CONSOLE
+      - _APP_MAINTENANCE_RETENTION_AUDIT_
       - _APP_MAINTENANCE_RETENTION_USAGE_HOURLY
       - _APP_MAINTENANCE_RETENTION_SCHEDULES
       - _APP_SMS_PROVIDER
@@ -153,9 +153,9 @@ services:
       - _APP_MIGRATIONS_FIREBASE_CLIENT_ID
       - _APP_MIGRATIONS_FIREBASE_CLIENT_SECRET
       - _APP_ASSISTANT_OPENAI_API_KEY
-  appwrite-console:
+  appwrite-:
     <<: *x-logging
-    image: appwrite/console:5.2.58
+    image: appwrite/console:latest
     restart: unless-stopped
     networks:
       - appwrite
